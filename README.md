@@ -1,28 +1,24 @@
-# Assunto. — Roleta de descobertas
+# Roleta de Temas
 
-Roleta interativa com 16 temas criativos para pesquisar e depois explicar com suas próprias palavras.
+Roleta interativa, minimalista e responsiva com **16 categorias inspiradas nas seções de uma livraria**.
 
-## Como utilizar
-Abra `index.html` no navegador. Não é necessário instalar dependências nem executar um servidor.
+## Como usar
 
-1. Clique para girar a roleta.
-2. Pesquise o tema sorteado seguindo as três perguntas orientadoras.
-3. Use o cronômetro de 5, 10, 15 ou 20 minutos.
-4. Explique o assunto sem consultar as anotações.
+Abra `index.html` no navegador e clique na roleta ou no botão central **GIRAR** para sortear um tema. O segmento indicado pela seta é o resultado.
 
-## Recursos
-- 16 temas com descrições e perguntas específicas.
-- Sorteio animado e opção para evitar repetições até completar o ciclo.
-- Histórico e preferências salvos no navegador.
-- Botões para pesquisar o assunto e copiar o roteiro.
-- Layout responsivo para dispositivos móveis e desktops.
-- JavaScript puro, sem frameworks.
+## Características
 
-## Estrutura
-- `index.html`: marcação e conteúdo da página.
-- `style.css`: design, animações e responsividade.
-- `app.js`: temas, roleta, cronômetro e persistência.
+- Página contendo somente a roleta, sem cabeçalhos ou painéis.
+- Temas: Jardinagem, Confeitaria, Religiões, História, Filosofia, Psicologia, Literatura, Gastronomia, Astronomia, Arquitetura, Artes, Música, Cinema, Ciência, Economia e Viagens.
+- Sorteio sem repetição até concluir os 16 temas; novo ciclo automático.
+- Persistência local dos sorteios, inclusive ao atualizar a página.
+- Responsividade para celular e desktop.
+- Suporte a navegação por teclado e preferência por movimento reduzido.
 
-Para personalizar os temas, edite `TOPICS` em `app.js`. As cores estão no início de `style.css`.
+## Arquivos
 
-**Observação:** as fontes hospedadas pelo Google exigem conexão com a internet. O site utiliza fontes alternativas do sistema quando estiver offline.
+- `index.html`: marcação essencial da roleta.
+- `style.css`: aparência, posicionamento e responsividade.
+- `app.js`: desenho vetorial, temas e lógica de sorteio.
+
+Não é necessário instalar dependências nem configurar servidor. A fonte DM Sans utiliza o Google Fonts quando há conexão com a internet e uma fonte local alternativa quando não há.
