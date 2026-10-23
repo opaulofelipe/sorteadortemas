@@ -6,84 +6,180 @@
  */
 const TOPICS = [
   {
-    name: "Jardinagem", label: "Jardinagem", category: "NATUREZA & CULTIVO",
-    description: "Cultivar plantas é aprender a construir pequenos ecossistemas, equilibrando solo, luz, água e vida microscópica.",
-    questions: ["Por que algumas plantas prosperam na sombra e outras precisam de sol direto?", "O que faz um solo ser fértil e como a compostagem contribui para isso?", "Como montar e manter uma pequena horta em casa?"]
+    "name": "Jardinagem",
+    "label": "Jardinagem",
+    "category": "PLANTAS & CULTIVO",
+    "description": "Aprenda a cuidar de plantas e a criar jardins e hortas, entendendo como luz, água, solo e clima influenciam cada espécie.",
+    "questions": [
+      "Como escolher plantas adequadas à iluminação e ao clima de um ambiente?",
+      "Por que regar em excesso pode prejudicar as raízes?",
+      "O que é necessário para começar uma pequena horta em casa?"
+    ]
   },
   {
-    name: "Micologia", label: "Micologia", category: "BIOLOGIA",
-    description: "O estudo dos fungos revela redes subterrâneas, decomposição, medicamentos e relações surpreendentes com outros seres vivos.",
-    questions: ["Em que os fungos diferem das plantas e dos animais?", "Como o micélio participa da decomposição e da vida das florestas?", "Que usos dos fungos existem na alimentação, na medicina e na indústria?"]
+    "name": "Confeitaria",
+    "label": "Confeitaria",
+    "category": "DOCES & TÉCNICAS",
+    "description": "Bolos, massas, cremes e chocolates combinam precisão, criatividade e transformações químicas que explicam texturas e sabores.",
+    "questions": [
+      "Qual é a função de farinha, ovos, açúcar e fermento na estrutura de um bolo?",
+      "Por que a temperatura é importante ao preparar chocolate e caramelo?",
+      "O que diferencia massas, recheios e coberturas da confeitaria clássica?"
+    ]
   },
   {
-    name: "Bioluminescência", label: "Luz viva", category: "VIDA NO PLANETA",
-    description: "Alguns seres vivos produzem luz por reações químicas: um recurso para atrair, confundir, comunicar e sobreviver.",
-    questions: ["Que reação química permite a um organismo produzir luz?", "Por que a bioluminescência é tão comum nas profundezas do oceano?", "Como cientistas usam organismos luminosos em pesquisas?"]
+    "name": "Religiões",
+    "label": "Religiões",
+    "category": "FÉ & CULTURA",
+    "description": "Investigue as crenças, os rituais, os textos e os contextos históricos de diferentes tradições religiosas, respeitando suas diferenças.",
+    "questions": [
+      "Quais são as origens e as principais características de duas tradições religiosas?",
+      "Como rituais e calendários religiosos se relacionam com a vida social?",
+      "Qual é a diferença entre religião, espiritualidade e prática cultural?"
+    ]
   },
   {
-    name: "Cartografia", label: "Cartografia", category: "MUNDO & REPRESENTAÇÃO",
-    description: "Um mapa não é simplesmente uma cópia do mundo: ele seleciona, distorce, organiza e comunica informações sobre o espaço.",
-    questions: ["Por que não é possível representar uma superfície esférica num plano sem distorções?", "Qual a diferença entre escala, projeção cartográfica e legenda?", "De que maneira mapas influenciaram viagens, fronteiras e relações de poder?"]
+    "name": "História",
+    "label": "História",
+    "category": "SOCIEDADES & TEMPO",
+    "description": "Explore acontecimentos, personagens e processos para compreender como as sociedades mudaram e por que o passado é interpretado de maneiras distintas.",
+    "questions": [
+      "Que causas e consequências explicam uma transformação histórica importante?",
+      "Como historiadores utilizam documentos, objetos e testemunhos como fontes?",
+      "Por que um mesmo acontecimento pode receber interpretações diferentes?"
+    ]
   },
   {
-    name: "Criptografia", label: "Criptografia", category: "CIÊNCIA & TECNOLOGIA",
-    description: "Da troca de mensagens secretas na Antiguidade à segurança digital, a criptografia protege informações por meio de métodos matemáticos.",
-    questions: ["Como uma cifra simples transforma uma mensagem legível em código?", "Qual a diferença entre criptografia simétrica e assimétrica?", "Como a criptografia protege conversas e transações online?"]
+    "name": "Filosofia",
+    "label": "Filosofia",
+    "category": "IDEIAS & ARGUMENTOS",
+    "description": "Questione noções como liberdade, conhecimento, justiça e felicidade por meio de argumentos formulados ao longo da história.",
+    "questions": [
+      "Como dois filósofos diferentes compreendem a ideia de liberdade?",
+      "O que distingue uma opinião de um argumento bem fundamentado?",
+      "Como uma questão filosófica aparece em decisões do cotidiano?"
+    ]
   },
   {
-    name: "Sinestesia", label: "Sinestesia", category: "MENTE & PERCEPÇÃO",
-    description: "Para algumas pessoas, letras evocam cores ou sons sugerem formas: experiências perceptivas que desafiam nossas noções de sentidos separados.",
-    questions: ["O que caracteriza a sinestesia e quais são seus tipos mais conhecidos?", "Como ela difere de uma metáfora ou de uma associação aprendida?", "Que hipóteses científicas tentam explicar sua origem?"]
+    "name": "Psicologia",
+    "label": "Psicologia",
+    "category": "MENTE & COMPORTAMENTO",
+    "description": "Conheça pesquisas sobre memória, emoções, aprendizagem, percepção e relações humanas, distinguindo evidências científicas de crenças populares.",
+    "questions": [
+      "Como a memória funciona e por que podemos lembrar de maneira imprecisa?",
+      "Que fatores influenciam nossos hábitos e nossas decisões?",
+      "Como os psicólogos investigam comportamentos sem depender apenas de impressões pessoais?"
+    ]
   },
   {
-    name: "Vulcanologia", label: "Vulcões", category: "CIÊNCIAS DA TERRA",
-    description: "Os vulcões revelam o movimento do interior da Terra, a formação de paisagens e os riscos de viver sobre um planeta geologicamente ativo.",
-    questions: ["Como o magma se forma e por que alguns vulcões entram em erupção?", "O que distingue vulcões-escudo de estratovulcões?", "Como pesquisadores monitoram os sinais de uma possível erupção?"]
+    "name": "Literatura",
+    "label": "Literatura",
+    "category": "LIVROS & NARRATIVAS",
+    "description": "Descubra gêneros, estilos, movimentos e recursos usados por escritores para construir personagens, conflitos e interpretações do mundo.",
+    "questions": [
+      "Qual é a diferença entre romance, conto, poesia e crônica?",
+      "Como narrador, tempo e ponto de vista modificam a leitura de uma história?",
+      "De que maneira uma obra literária dialoga com a sociedade em que foi escrita?"
+    ]
   },
   {
-    name: "Etimologia", label: "Etimologia", category: "LÍNGUA & HISTÓRIA",
-    description: "Toda palavra tem uma trajetória: mudanças de som, significado e circulação que preservam pistas de encontros entre culturas.",
-    questions: ["Como linguistas investigam a origem de uma palavra?", "Que palavras do português têm histórias surpreendentes?", "Por que o significado das palavras muda com o passar do tempo?"]
+    "name": "Gastronomia",
+    "label": "Gastronomia",
+    "category": "SABORES & TRADIÇÕES",
+    "description": "Explore ingredientes, cozinhas regionais e técnicas culinárias, relacionando alimentação à história, à cultura e à ciência.",
+    "questions": [
+      "Como um prato típico expressa a história e os ingredientes de uma região?",
+      "O que muda nos alimentos quando assamos, grelhamos ou cozinhamos?",
+      "Como a circulação de pessoas e produtos transformou hábitos alimentares?"
+    ]
   },
   {
-    name: "Brutalismo", label: "Brutalismo", category: "ARQUITETURA & DESIGN",
-    description: "A arquitetura brutalista valoriza estrutura, materialidade e formas expressivas, frequentemente associadas ao concreto aparente.",
-    questions: ["De onde vem o nome brutalismo e como o movimento surgiu?", "Quais soluções e ideias aparecem em edifícios brutalistas famosos?", "Por que essa arquitetura desperta tanto admiração quanto rejeição?"]
+    "name": "Astronomia",
+    "label": "Astronomia",
+    "category": "ESPAÇO & UNIVERSO",
+    "description": "Investigue planetas, estrelas, galáxias e fenômenos celestes a partir das observações e das explicações da astronomia moderna.",
+    "questions": [
+      "Qual é a diferença entre planeta, estrela, sistema solar e galáxia?",
+      "Como sabemos a composição e a distância de objetos tão remotos?",
+      "O que acontece com uma estrela ao longo de sua existência?"
+    ]
   },
   {
-    name: "Fermentação", label: "Fermentação", category: "QUÍMICA & COTIDIANO",
-    description: "Microrganismos transformam açúcares em novas substâncias e ajudam a produzir pão, queijo, iogurte e inúmeros sabores.",
-    questions: ["O que leveduras e bactérias fazem durante a fermentação?", "Como o processo muda sabor, textura e conservação dos alimentos?", "Qual a diferença entre fermentação alcoólica e láctica?"]
+    "name": "Arquitetura",
+    "label": "Arquitetura",
+    "category": "ESPAÇOS & CIDADES",
+    "description": "Estude como construções e cidades combinam técnica, estética e necessidades sociais, do patrimônio histórico às soluções contemporâneas.",
+    "questions": [
+      "Como clima e materiais disponíveis influenciam o projeto de um edifício?",
+      "Quais características diferenciam duas correntes arquitetônicas?",
+      "Como o desenho das cidades afeta a circulação e a convivência das pessoas?"
+    ]
   },
   {
-    name: "Biomimética", label: "Biomimética", category: "INOVAÇÃO & NATUREZA",
-    description: "A biomimética observa estratégias da natureza e as transforma em soluções para materiais, edificações, equipamentos e sistemas.",
-    questions: ["Como a observação de seres vivos inspira projetos tecnológicos?", "Quais invenções foram influenciadas por plantas ou animais?", "Quais limites existem ao tentar reproduzir uma solução natural?"]
+    "name": "Artes",
+    "label": "Artes",
+    "category": "CRIAÇÃO & EXPRESSÃO",
+    "description": "Conheça pintura, escultura, gravura e outras linguagens visuais, observando materiais, estilos e o contexto das obras.",
+    "questions": [
+      "O que distingue movimentos artísticos como Renascimento, Barroco e Modernismo?",
+      "Como cor, composição e materialidade podem modificar o sentido de uma obra?",
+      "Como a época e o público influenciam a produção e a interpretação artística?"
+    ]
   },
   {
-    name: "Oceanografia", label: "Oceano fundo", category: "PLANETA ÁGUA",
-    description: "A maior parte do oceano permanece pouco observada diretamente; correntes, pressão e ecossistemas profundos guardam questões fundamentais.",
-    questions: ["Por que explorar regiões abissais é tão difícil?", "Como organismos sobrevivem onde não chega luz solar?", "Que papel as correntes oceânicas desempenham no clima terrestre?"]
+    "name": "Música",
+    "label": "Música",
+    "category": "RITMO & CULTURA",
+    "description": "Explore gêneros musicais, instrumentos, formas de composição e a relação entre sons, identidades e transformações sociais.",
+    "questions": [
+      "Como ritmo, melodia e harmonia contribuem para a construção de uma música?",
+      "Como surgiu e se transformou um gênero musical de sua escolha?",
+      "Que mudanças ocorreram na música com as tecnologias de gravação e distribuição?"
+    ]
   },
   {
-    name: "Luteria", label: "Luteria", category: "ARTE & ACÚSTICA",
-    description: "Construir instrumentos musicais exige sensibilidade artística e conhecimento da madeira, da vibração e das propriedades do som.",
-    questions: ["Como a forma e o material de um instrumento influenciam seu timbre?", "Quais são as principais etapas de construção de um violino ou violão?", "Como artesãos conciliam tradição, ajuste acústico e inovação?"]
+    "name": "Cinema",
+    "label": "Cinema",
+    "category": "IMAGENS & NARRATIVAS",
+    "description": "Descubra como roteiro, fotografia, montagem, atuação e som se combinam para contar histórias e provocar diferentes efeitos.",
+    "questions": [
+      "Como enquadramentos e movimentos de câmera orientam o olhar do espectador?",
+      "Qual é o papel da montagem na construção do ritmo e do significado?",
+      "Como um gênero cinematográfico reflete valores e conflitos de sua época?"
+    ]
   },
   {
-    name: "Arqueoastronomia", label: "Céu antigo", category: "HISTÓRIA & CÉU",
-    description: "A arqueoastronomia investiga como diferentes sociedades observaram os astros e incorporaram seus ciclos a construções e rituais.",
-    questions: ["Como povos antigos relacionavam o céu às estações e à agricultura?", "Que evidências permitem investigar alinhamentos astronômicos em monumentos?", "Como evitar interpretações fantasiosas sobre observatórios antigos?"]
+    "name": "Ciência",
+    "label": "Ciência",
+    "category": "DESCOBERTAS & MÉTODOS",
+    "description": "Entenda como hipóteses, observações e experimentos produzem conhecimento sobre a natureza e como novas evidências alteram explicações.",
+    "questions": [
+      "Qual é a diferença entre hipótese, evidência, teoria e lei científica?",
+      "Como um experimento pode testar uma explicação e controlar outras variáveis?",
+      "Que descoberta científica modificou nosso cotidiano e por qual mecanismo?"
+    ]
   },
   {
-    name: "Mitologia comparada", label: "Mitologias", category: "CULTURA & NARRATIVAS",
-    description: "Comparar mitos de sociedades distintas ajuda a compreender símbolos, explicações de origem e formas de transmitir valores culturais.",
-    questions: ["Que semelhanças e diferenças existem entre mitos de criação?", "Como os mitos refletem as relações sociais e o ambiente de cada povo?", "Por que comparar mitologias não significa afirmar que todas contam a mesma história?"]
+    "name": "Economia",
+    "label": "Economia",
+    "category": "TRABALHO & SOCIEDADE",
+    "description": "Investigue produção, preços, trabalho, moeda e políticas econômicas para compreender decisões que afetam empresas, famílias e governos.",
+    "questions": [
+      "Por que o preço de um produto pode variar entre regiões e períodos?",
+      "Qual é a diferença entre inflação, juros e poder de compra?",
+      "Como decisões do Estado e das empresas influenciam emprego e produção?"
+    ]
   },
   {
-    name: "Tipografia", label: "Tipografia", category: "LINGUAGEM VISUAL",
-    description: "A forma das letras influencia a legibilidade, a hierarquia e a identidade visual de tudo que lemos, de livros a interfaces digitais.",
-    questions: ["Como diferenciar tipografia serifada, sem serifa e monoespaçada?", "Como tamanho, espaçamento e contraste alteram a experiência de leitura?", "Que escolhas tipográficas mudaram a história do design gráfico?"]
+    "name": "Viagens",
+    "label": "Viagens",
+    "category": "LUGARES & CULTURAS",
+    "description": "Explore destinos, paisagens, costumes e patrimônio, aprendendo a viajar com atenção à história local e aos impactos do turismo.",
+    "questions": [
+      "Que aspectos históricos e geográficos tornam um destino singular?",
+      "Como costumes e tradições locais podem orientar uma visita respeitosa?",
+      "Quais efeitos positivos e negativos o turismo pode causar em uma comunidade?"
+    ]
   }
 ];
 
@@ -98,7 +194,7 @@ const els = {
   timerNote: $("#timerNote"), toast: $("#toast"), screenReader: $("#screenReaderStatus"), history: $("#historyItems"), resetHistory: $("#resetHistory")
 };
 
-const STORAGE_KEY = "assunto_roleta_v1";
+const STORAGE_KEY = "assunto_roleta_v2";
 let state = { history: [], noRepeat: true, lastIndex: null, minutes: 10 };
 try {
   const stored = JSON.parse(localStorage.getItem(STORAGE_KEY));
