@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f4f1ea" />
+  <meta name="description" content="Uma roleta de 16 temas para descobrir, pesquisar e explicar. Curiosidade em movimento." />
+  <title>Assunto. — Uma roleta de descobertas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="#inicio" aria-label="Assunto, voltar ao início">
+        <span class="brand-symbol" aria-hidden="true">
+          <svg viewBox="0 0 30 30" fill="none"><path d="M15 1.5C15 9.2 20.8 15 28.5 15C20.8 15 15 20.8 15 28.5C15 20.8 9.2 15 1.5 15C9.2 15 15 9.2 15 1.5Z" fill="currentColor"/></svg>
+        </span>
+        <span class="brand-name">assunto<span>.</span></span>
+      </a>
+      <div class="header-center" aria-hidden="true">UM LABORATÓRIO DE CURIOSIDADE</div>
+      <div class="header-edition"><span class="live-dot"></span> EDIÇÃO Nº 001</div>
+    </header>
+
+    <main id="inicio">
+      <div class="hero-grid">
+        <section class="intro" aria-labelledby="hero-title">
+          <div class="eyebrow"><span class="eyebrow-line"></span> A ARTE DE APRENDER ALGO NOVO</div>
+          <h1 id="hero-title">Uma ideia.<br>Uma pesquisa.<br><em>Uma boa história.</em></h1>
+          <p class="hero-description">Deixe o acaso escolher o próximo assunto. Descubra o que existe por trás dele e depois explique com suas próprias palavras.</p>
+          <div class="how-to" aria-label="Como funciona">
+            <div class="how-to-title">COMO FUNCIONA <span class="rule"></span> 01—03</div>
+            <div class="step-row">
+              <span class="step-index">01</span>
+              <span class="step-name">Sorteie</span>
+              <span class="step-detail">Deixe a roleta decidir.</span>
+              <span class="step-icon" aria-hidden="true">↗</span>
+            </div>
+            <div class="step-row">
+              <span class="step-index">02</span>
+              <span class="step-name">Pesquise</span>
+              <span class="step-detail">Vá além da definição.</span>
+              <span class="step-icon" aria-hidden="true">↗</span>
+            </div>
+            <div class="step-row">
+              <span class="step-index">03</span>
+              <span class="step-name">Explique</span>
+              <span class="step-detail">Ensine sem ler.</span>
+              <span class="step-icon" aria-hidden="true">↗</span>
+            </div>
+          </div>
+          <div class="hero-footer"><span class="asterisk" aria-hidden="true">✳</span> 16 UNIVERSOS PARA EXPLORAR <span class="hero-footer-line"></span> SEM PRESSA DE SABER TUDO</div>
+        </section>
+
+        <section class="roulette-card" aria-label="Roleta de temas">
+          <div class="roulette-heading">
+            <div><div class="overline light">A PRÓXIMA DESCOBERTA</div><div class="roulette-subtitle">O que vamos aprender hoje?</div></div>
+            <span class="wheel-fraction" id="wheelFraction" aria-label="16 temas na roleta">01 <span>/ 16</span></span>
+          </div>
+          <div class="wheel-scene">
+            <div class="wheel-scene-lines" aria-hidden="true"></div>
+            <div class="wheel-container">
+              <div class="wheel-shadow" aria-hidden="true"></div>
+              <div id="wheelSpin" class="wheel-rotator" aria-hidden="true">
+                <svg id="wheelSvg" viewBox="-300 -300 600 600" role="presentation" focusable="false"></svg>
+              </div>
+              <div class="wheel-pointer" aria-hidden="true">
+                <svg viewBox="0 0 44 58" fill="none"><path d="M22 55L2.5 13.5C0 8 4 2 10 2H34C40 2 44 8 41.5 13.5L22 55Z" fill="#E6B783" stroke="#253830" stroke-width="3"/><path d="M22 43L12 12H32L22 43Z" fill="#F3DFC0"/></svg>
+              </div>
+              <button class="wheel-center" id="spinCenter" type="button" aria-label="Girar a roleta">
+                <svg class="center-spark" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2.5C12 8.15 15.85 12 21.5 12C15.85 12 12 15.85 12 21.5C12 15.85 8.15 12 2.5 12C8.15 12 12 8.15 12 2.5Z" fill="currentColor"/></svg>
+                <span>GIRAR</span>
+              </button>
+            </div>
+          </div>
+          <div class="roulette-actions">
+            <button id="spinButton" class="main-button" type="button"><span id="spinLabel">GIRAR A ROLETA</span><span class="button-arrow" aria-hidden="true">↗</span></button>
+            <div class="roulette-bottom">
+              <label class="switch-label" for="noRepeat">
+                <span class="switch"><input id="noRepeat" type="checkbox" checked /><span class="switch-track"></span></span>
+                <span>Não repetir temas</span>
+              </label>
+              <span id="remainingCount" class="count-small">16 disponíveis</span>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <section class="discovery-card" aria-labelledby="discovery-heading">
+        <div class="discovery-topline">
+          <span class="overline">CADERNO DE DESCOBERTAS <span class="topline-star">✳</span></span>
+          <span class="discovery-chapter" id="discoveryChapter">CAPÍTULO 00</span>
+        </div>
+        <div class="discovery-grid">
+          <div class="discovery-content">
+            <div id="idleContent" class="idle-state">
+              <span class="idle-illustration" aria-hidden="true">?</span>
+              <h2 id="discovery-heading">Uma página ainda <em>em branco.</em></h2>
+              <p>Gire a roleta. O tema sorteado aparece aqui, com três boas perguntas para orientar sua investigação.</p>
+            </div>
+            <div id="resultContent" class="result-content" hidden>
+              <div class="result-kicker"><span class="result-star">✳</span> VOCÊ DESCOBRIU <span class="result-category" id="resultCategory"></span></div>
+              <h2 id="resultTitle" tabindex="-1"></h2>
+              <p id="resultDescription" class="result-description"></p>
+              <div class="question-box"><h3>Três perguntas para investigar</h3><ol id="questionList"></ol></div>
+              <div class="result-actions">
+                <a id="researchLink" class="research-link" target="_blank" rel="noopener noreferrer" href="https://www.google.com/">PESQUISAR ESTE TEMA <span aria-hidden="true">↗</span></a>
+                <button id="copyButton" class="copy-button" type="button"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg> COPIAR ROTEIRO</button>
+              </div>
+            </div>
+          </div>
+          <aside class="timer-card" aria-labelledby="timerHeading">
+            <div class="timer-header"><span class="timer-icon" aria-hidden="true">◷</span><span>SEU TEMPO DE PESQUISA</span></div>
+            <h3 id="timerHeading">Investigue com calma.</h3>
+            <p>Reserve alguns minutos para pesquisar. Depois, tente explicar o assunto sem consultar suas anotações.</p>
+            <div class="timer-digits" id="timerDigits" role="timer" aria-live="off" aria-label="10 minutos restantes">10<span>:</span>00</div>
+            <div class="duration-pills" aria-label="Duração do cronômetro">
+              <button class="duration-pill" data-minutes="5" type="button" aria-pressed="false">5 MIN</button>
+              <button class="duration-pill active" data-minutes="10" type="button" aria-pressed="true">10 MIN</button>
+              <button class="duration-pill" data-minutes="15" type="button" aria-pressed="false">15 MIN</button>
+              <button class="duration-pill" data-minutes="20" type="button" aria-pressed="false">20 MIN</button>
+            </div>
+            <div class="timer-buttons"><button id="timerToggle" class="timer-primary" type="button">INICIAR TEMPO <span aria-hidden="true">→</span></button><button id="timerReset" class="timer-reset" type="button" aria-label="Reiniciar cronômetro" title="Reiniciar cronômetro">↺</button></div>
+            <p class="timer-note" id="timerNote" role="status">O aprendizado começa com uma pergunta.</p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="closing-section" aria-label="Desafio final e histórico de sorteios">
+        <div class="challenge"><div class="closing-label">O DESAFIO FINAL <span>↗</span></div><h2>Aprendeu? <em>Conte para alguém.</em></h2><p>Explique o que é, apresente um exemplo concreto e diga por que isso importa. Se conseguir ensinar com clareza, você realmente entendeu.</p></div>
+        <div class="history"><div class="history-heading"><span class="closing-label">TEMAS JÁ SORTEADOS</span><button id="resetHistory" class="reset-history" type="button">RECOMEÇAR ↺</button></div><div id="historyItems" class="history-items"><span class="history-empty">Suas descobertas aparecerão aqui.</span></div></div>
+      </section>
+    </main>
+    <footer class="site-footer"><span>ASSUNTO. — FEITO PARA MENTES CURIOSAS</span><span>O ACASO ESCOLHE. VOCÊ DESCOBRE.</span><a href="#inicio">VOLTAR AO INÍCIO ↑</a></footer>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <div id="screenReaderStatus" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+<script src="app.js" defer></script>
+</body>
+</html>
